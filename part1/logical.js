@@ -6,8 +6,8 @@ let isLoggedIn=true ;
 // let isPaid=false;
 let isPaid=true;
 
-// console.log(isLoggedIn && isPaid);
+// console.log(isLoggedIn && isPaid); //true.
 
 let isEmailuser=true;
 let isgoogleuser=false;
-console.log(isEmailuser || isgoogleuser);
+console.log(isEmailuser || isgoogleuser); //true.
