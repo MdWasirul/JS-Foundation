@@ -11,11 +11,21 @@ let multiple = 4 * 7;
 let division = 18 / 3;
 
 let remainder = 18 % 3;
-let expon=2 ** 3;
+let expon = 2 ** 3;
 
-let myscore=110;
+let myscore = 110;
 myscore++;
 // ++myscore;
 
-let credits=65;
+let credits = 65;
 credits--;
+
+//comparison operator
+
+let num1 = 3;
+let num2 = 3;
+let num3 = 6;
+console.log(num1 == num2); //true
+console.log(num1 != num3); //true
+console.log(num1 > num3);
+console.log(num1 < num3);
