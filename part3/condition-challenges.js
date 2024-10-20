@@ -60,8 +60,8 @@ let items=["kunal"];
 
 console.log(items.length);
 if(items.length===0){
-    console.log("Array is Empty");  /*output->   0
-                                               Array is Empty */
+    console.log("Array is Empty");  /*output->   1
+                                               Array is not Empty */
 }else{
     console.log("Array is not Empty");
 }
