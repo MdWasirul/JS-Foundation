@@ -108,3 +108,11 @@ console.log(isLondonInList);  //true in case of "London" and false in case of "l
 
 
 // for more array methods please refer to  MDN Docs array methods.
+
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
