@@ -93,6 +93,7 @@ console.log(worldCities);  //[ 'Paris', 'Rome', 'Tokyo', 'Bangkok' ]
 let teaMenu = ["Masala chai", "oolong tea", "green tea", "earl grey"];
 
 let menuLength = teaMenu.length;
+console.log(menuLength);
 
 /* 
 10. You have an array named `cityBucketList` containing `"Kyoto"`, `"London"`, `"Cape Town"`, and `"Vancouver"`. 
@@ -102,3 +103,4 @@ let menuLength = teaMenu.length;
 let cityBucketList = ["Kyoto", "London", "Cape Town", "Vancouver"];
 
 let isLondonInList = cityBucketList.includes("London");
+console.log(isLondonInList);  //true in case of "London" and false in case of "london"
