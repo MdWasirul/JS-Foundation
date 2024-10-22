@@ -116,3 +116,9 @@ array1.forEach((element) => console.log(element));
 // Expected output: "a"
 // Expected output: "b"
 // Expected output: "c"
+
+
+// let arr =[1,2,3];
+// arr.push(4);
+// arr.pop();
+// console.log(arr);
