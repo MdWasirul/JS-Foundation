@@ -60,3 +60,14 @@ for (let k = 0; k < numbers.length; k++) {
     MultipliedNumbers.push(numbers[k]*2);
 }
 console.log(MultipliedNumbers);
+
+/* Write a `for` loop that list all the cities in the array `["Paris","New York","Tokyo","London"]` and stores each city in a new array named `citylist`.
+*/
+ let citylist=[];
+ let cities=["Paris","New York","Tokyo","London"];
+ for(let m=0;m<cities.length;m++){
+    // citylist.push(cities[m]);
+    const citieslist=cities[m];
+    citylist.push(citieslist);
+ }
+ console.log(citylist);
