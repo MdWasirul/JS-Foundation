@@ -20,7 +20,7 @@ while (x > 0) {
   countdown.push(x);
   x--;
 }
-console.log(countdown);
+console.log(countdown);  //[ 5, 4, 3, 2, 1 ]
 
 /* 3. write a do while  loop that prompts a user to enter 
 their favourite tea type until 
@@ -46,7 +46,7 @@ do {
   total = total + j;
   j++;
 } while (j <= 3);
-console.log(total);
+console.log(total);  //6
 
 /*
 5. write a for loop that multiplies each element    in the array `[2 4 6 ]` by 2 and stores the result in the new array named `MultipliedNumbers`.
@@ -59,7 +59,7 @@ for (let k = 0; k < numbers.length; k++) {
     // MultipliedNumbers.push(takenumber);
     MultipliedNumbers.push(numbers[k]*2);
 }
-console.log(MultipliedNumbers);
+console.log(MultipliedNumbers); //[ 4, 8, 12 ]
 
 /* Write a `for` loop that list all the cities in the array `["Paris","New York","Tokyo","London"]` and stores each city in a new array named `citylist`.
 */
@@ -70,4 +70,4 @@ console.log(MultipliedNumbers);
     const citieslist=cities[m];
     citylist.push(citieslist);
  }
- console.log(citylist);
+ console.log(citylist);//["Paris","New York","Tokyo","London"]
