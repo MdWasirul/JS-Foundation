@@ -66,7 +66,7 @@ for (const city in citiesPopulation) {
     cityNewPopulation[city]= citiesPopulation[city];
 }
 
-console.log(cityNewPopulation);
+// console.log(cityNewPopulation);
 /*{
 
   Londan: 8900000,
@@ -74,5 +74,5 @@ console.log(cityNewPopulation);
   Paris: 22000000,
   Berlin: 3500000
 }
-  
+
 */
