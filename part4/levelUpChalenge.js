@@ -53,6 +53,26 @@ let citiesPopulation={
     "Paris":22000000,
     "Berlin":3500000,
 };
-let cityPopulation={};
-console.log(Object.keys(citiesPopulation));  //[ 'Londan', 'New Yark', 'Paris', 'Berlin' ]
+let cityNewPopulation={};
+// console.log(Object.keys(citiesPopulation));  //[ 'Londan', 'New Yark', 'Paris', 'Berlin' ]
+for (const city in citiesPopulation) {
 
+    // console.log(city);   //Londan  New Yark  Paris Berlin
+    
+    //key =value
+    if(city=='Berlin'){
+
+    }
+    cityNewPopulation[city]= citiesPopulation[city];
+}
+
+console.log(cityNewPopulation);
+/*{
+
+  Londan: 8900000,
+  'New Yark': 84000000,
+  Paris: 22000000,
+  Berlin: 3500000
+}
+  
+*/
