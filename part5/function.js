@@ -1,3 +1,6 @@
+
+//-------------------Function In JS ,Arrow Function ,this,Execution Context... 
+
 /* 1. Write a function name `makeTea` that takes one parameter,`typeOfTea`,and retrun string like
 `"Making green tea "` when called with "green tea".
 Store the result in a variable named `teaOrder`.
@@ -44,4 +47,4 @@ const calculateTotal = (price, quantity) => {
 // const calculateTotal = (price, quantity) => price * quantity;
   
 let totalCost=calculateTotal(500,2);
-console.log(totalCost);
+console.log(totalCost);  //1000
