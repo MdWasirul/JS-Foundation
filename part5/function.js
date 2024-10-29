@@ -22,12 +22,26 @@ Store the result in a variable named `teaOrder`.
 /* 2. Create a function named ` orderTea` that takes one parameter, `teaType`.Inside this function, create another function named `confirmOrder` that return a message like `"Order confirmed for chai"` .
 Call `confirmedOrder` from within `orderTea` and return the result.
 */
-function orderTea(teaType){
-    function confirmOrder(){
-        return `OrderConfirmed for chai`;
-    }
- return confirmOrder();   //OrderConfirmed for chai
+function orderTea(teaType) {
+  function confirmOrder() {
+    return `OrderConfirmed for chai`;
+  }
+  return confirmOrder(); //OrderConfirmed for chai
 }
-let OrderConfirmed=orderTea("LemonChai");
-console.log(OrderConfirmed); //  Output-> OrderConfirmed for chai
+let OrderConfirmed = orderTea("LemonChai");
+// console.log(OrderConfirmed); //  Output-> OrderConfirmed for chai
 
+/*
+3.Write an arrow function named `calculateTotal` that
+takes two parameters: `price ` and `quantity `.The function should return 
+the total cost by multiplying the `price` and `quantity`
+Store the result in a variable named `totalCost`.
+
+*/
+const calculateTotal = (price, quantity) => {
+  return price * quantity;
+};
+// const calculateTotal = (price, quantity) => price * quantity;
+  
+let totalCost=calculateTotal(500,2);
+console.log(totalCost);
