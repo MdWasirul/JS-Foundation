@@ -1,5 +1,4 @@
-
-//-------------------Function In JS ,Arrow Function ,this,Execution Context... 
+//-------------------Function In JS ,Arrow Function ,this,Execution Context...
 
 /* 1. Write a function name `makeTea` that takes one parameter,`typeOfTea`,and retrun string like
 `"Making green tea "` when called with "green tea".
@@ -45,6 +44,35 @@ const calculateTotal = (price, quantity) => {
   return price * quantity;
 };
 // const calculateTotal = (price, quantity) => price * quantity;
-  
-let totalCost=calculateTotal(500,2);
-console.log(totalCost);  //1000
+
+let totalCost = calculateTotal(500, 2);
+// console.log(totalCost); //1000
+
+//------------------HigherFunction-----------
+/*
+4.Write a function named `processTeaOrder` that takes another function, `makeTea` as a parameter and calls it with the argument `"early grey".
+Return the result of calling `makeTea`.
+*/
+function makeTea(typeOfTea) {
+  return `makeTea:${typeOfTea}`; //without parameter ,it return undefined.
+}
+function processTeaOrder(teafunction) {
+  return teafunction("early grey");
+}
+let Order = processTeaOrder(makeTea);
+// console.log(Order); //makeTea:early greay
+
+/*
+Write a function named `createTeaMaker` that returns another function .The returned function should take one parameter,`teaType`,and return a message like `"Making green tea"`.
+Store the returned function in a variablenamed `teaMaker` and call it with `"gren tea"`.
+*/
+function createTeaMaker() {
+  return function (teaType) {
+    return `Making ${teaType}`;
+  };
+}
+
+let teaMaker=createTeaMaker();
+// console.log(teaMaker("green tea"));
+let result=teaMaker("green tea");
+console.log(result); //Making green tea.
