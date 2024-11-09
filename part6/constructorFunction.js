@@ -19,5 +19,27 @@ function Tea(type){
     };
 }
 let lemonTea= new Tea("lemon tea");
-console.log(lemonTea);  //Tea { type: 'lemon tea', describe: [Function (anonymous)] }
-console.log(lemonTea.describe());  //this is a cup of lemon tea
+// console.log(lemonTea);  //Tea { type: 'lemon tea', describe: [Function (anonymous)] }
+// console.log(lemonTea.describe());  //this is a cup of lemon tea
+
+function Animal(species){
+    this.species=species;
+
+}
+Animal.prototype.sound=function(){
+    return`${this.species} make sound`;
+}
+let dog=new Animal("Dog");
+// console.log(dog.sound());    //  Dog make sound
+
+function Drink(names){
+    if(!new.target){
+        throw new Error("Drink must be  called with new keyword");
+    }
+    this.names=names;
+}
+let tea=new Drink("tea");
+let coffee=Drink("coffee");  //this will gives an error
+
+// console.log(typeof(tea)) //object
+// console.log(typeof(tea))  //function
