@@ -84,8 +84,34 @@ class BankAccount{
    }
   
 }
+/*
 let account=new BankAccount();
 console.log(account.balance);   //undefined
 console.log(account.getBalance()); //$ 0
 account.deposit(500);
 console.log(account.getBalance()); //$ 500
+*/
+
+//-----------------Abstraction------
+
+class CofeeMachine{
+start(){
+  //call DB
+  // filter value
+  return`Starting the Machine ..........`;
+}
+
+brewCofee(){
+ //Complex calculation
+ return`BrewCoffee`;
+}
+pressStartButton(){
+ let msgOne= this.start();
+ let msgTwo= this.brewCofee();
+ return `${msgOne} + ${msgTwo}`;
+}
+}
+let myMachine=new CofeeMachine();
+// console.log(myMachine.start());
+// console.log(myMachine.brewCofee());
+console.log(myMachine.pressStartButton()); //Starting the Machine .......... + BrewCoffee
