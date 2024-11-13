@@ -7,15 +7,15 @@
         return `${this.make} car got started in ${this.year}`;
     }
 };
-  console.log(car.start());
+  // console.log(car.start());
   
   function Person(name,age){
     this.name=name;
     this.age=age;
   }
   let john=new Person("John Doe",20);
-  console.log(john.name);
-  console.log(john);
+  // console.log(john.name);
+  // console.log(john);
 
   function Animal(type){
     this.type=type;
@@ -28,9 +28,9 @@
     return`Custom method ${this}`
   }
   let myArray=[1 ,2,3];
-  console.log(myArray.hitesh());    // 1 2 3
+  // console.log(myArray.hitesh());    // 1 2 3
   let myNewArray=[2,3,4,5,6,7,8,9];
-  console.log(myNewArray.hitesh());
+  // console.log(myNewArray.hitesh());
 
   /*
   Toyota car got started in 2020
@@ -58,8 +58,8 @@ drive(){
 }
 }
 let myCar=new Car("Toyota","Corolla");
-console.log(myCar.start());
-console.log(myCar.drive());
+// console.log(myCar.start());
+// console.log(myCar.drive());
 /*
 Corolla is a car from Toyota
 Toyota :This is an inheritence examples
@@ -68,4 +68,24 @@ Toyota :This is an inheritence examples
 // console.log(vehOne.make);  //TypeError: Class constructor Vehicle cannot be invoked without 'new'
 
 let vehOne= new Vehicle("Toyota","Corolla");
-console.log(vehOne.make); //Toyota
+// console.log(vehOne.make); //Toyota
+
+//----------Incapsulation-----------------
+
+class BankAccount{
+  #balance=0;
+  deposit(amount){
+    this.#balance += amount;
+    return this.#balance;
+  }
+
+  getBalance(){
+    return`$ ${this.#balance}`;
+   }
+  
+}
+let account=new BankAccount();
+console.log(account.balance);   //undefined
+console.log(account.getBalance()); //$ 0
+account.deposit(500);
+console.log(account.getBalance()); //$ 500
