@@ -22,7 +22,6 @@ function Animal(type) {
 Animal.prototype.speak = function () {
   return `${this.type} makes sound `;
 };
-
 Array.prototype.hitesh = function () {
   return `Custom method ${this}`;
 };
@@ -165,7 +164,7 @@ class Employee {
   }
 }
 // let emp = new Employee("Alice", 50000);
-let emp = new Employee("Alice",50000);
+let emp = new Employee("Alice", 50000);
 console.log(emp._salary);
 console.log(emp.salary);
-emp.salary=90000;
+emp.salary = 90000;

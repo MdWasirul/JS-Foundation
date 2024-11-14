@@ -22,7 +22,7 @@ let lemonTea= new Tea("lemon tea");
 // console.log(lemonTea);  //Tea { type: 'lemon tea', describe: [Function (anonymous)] }
 // console.log(lemonTea.describe());  //this is a cup of lemon tea
 
-function Animal(species){
+function Animal(species){   
     this.species=species;
 
 }
