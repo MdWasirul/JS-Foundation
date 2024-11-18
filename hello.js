@@ -1,5 +1,5 @@
 console.log("Hello World!");
-/*
+/*-
 ............Scope and Lexical Environment..............
 
 1. Scope of a variable is directly dependent on the lexical environment.
