@@ -30,16 +30,24 @@ document
 
 //Example -3:
 
-document
-  .getElementById("changeOrder")
-  .addEventListener("click", function () {
-  let coffeeType=  document.getElementById("coffeeType");
-  coffeeType.textContent="Expresso";
-  coffeeType.style.backgroundColor="red";
-  coffeeType.style.padding="10px";
-//   coffeeType.style.textAlign="center";
-  });
+document.getElementById("changeOrder").addEventListener("click", function () {
+  let coffeeType = document.getElementById("coffeeType");
+  coffeeType.textContent = "Expresso";
+  coffeeType.style.backgroundColor = "red";
+  coffeeType.style.padding = "10px";
+  //   coffeeType.style.textAlign="center";
+});
 
+//Example-4
+document.getElementById("addNewItem").addEventListener("click", function () {
+  let newItem = document.createElement("li");
+  newItem.textContent = "Eggs";
+  document.getElementById("shoopingList").appendChild(newItem);
+  console.log(newItem.innerHTML);
+});
 
-  //Example-4
-  
+//Example-5
+document.getElementById("removeLastTask").addEventListener("click",function(){
+  let delTask=  document.getElementById("taskList");
+  delTask.lastElementChild.remove();
+})
