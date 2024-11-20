@@ -82,3 +82,15 @@ let feedback=document.getElementById("feedbackInput").value;
 console.log(feedback);
 document.getElementById("FeedbackDisplay").textContent=`feedback is : ${feedback}`;
 })
+
+//examples-9
+document.addEventListener("DOMContentLoaded",function(){
+  document.getElementById("domStatus").textContent="Dom fully Loaded Successfully"
+})
+
+//Example -10.
+document.getElementById("toggleHighLight").addEventListener("click",function(){
+  let descriptionText=document.getElementById("descriptionText");
+  // descriptionText.classList.add("highlight");
+  descriptionText.classList.toggle("highlight");
+});
