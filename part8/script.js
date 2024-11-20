@@ -72,3 +72,13 @@ document.getElementById("teaList").addEventListener
     alert("You selected : "+event.target.textContent)
   }
 });
+
+//Example -8
+document.getElementById("feedbackForm")
+.addEventListener("submit",function(event){
+// alert("submitted");
+event.preventDefault();
+let feedback=document.getElementById("feedbackInput").value;
+console.log(feedback);
+document.getElementById("FeedbackDisplay").textContent=`feedback is : ${feedback}`;
+})
