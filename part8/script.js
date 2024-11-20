@@ -47,7 +47,28 @@ document.getElementById("addNewItem").addEventListener("click", function () {
 });
 
 //Example-5
-document.getElementById("removeLastTask").addEventListener("click",function(){
-  let delTask=  document.getElementById("taskList");
-  delTask.lastElementChild.remove();
-})
+document
+  .getElementById("removeLastTask")
+  .addEventListener("click", function () {
+    let delTask = document.getElementById("taskList");
+    delTask.lastElementChild.remove();
+  });
+
+//Example -6
+document
+  .getElementById("clickMeButton")
+  .addEventListener("dblclick", function () {
+    // alert("chaicode");
+    alert("chaicode");
+  });
+
+//Example -7
+document.getElementById("teaList").addEventListener
+("click", function (event) {
+  // console.log(event);
+  // console.log(event.target.textContent);
+  // console.log(event.target);
+  if(event.target && event.target.matches(".teaItem")){
+    alert("You selected : "+event.target.textContent)
+  }
+});
