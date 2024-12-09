@@ -5,6 +5,7 @@ function sayHello(){
 }
 setTimeout(() => {
     sayHello();
+    console.log("Asynchronous in JS ");
    
 }, 3000);
 
