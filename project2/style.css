@@ -19,6 +19,7 @@ body {
     /* border: 2px solid red; */
     padding: 50px;
     background-color: #121413;
+    
     border-radius: 15px;
 }
 
@@ -48,6 +49,7 @@ body {
 }
 
 #get-weather-btn {
+    /* width:25%; */
     padding: 10px;
     border-radius: 4px;
     background-color: #0e78ce;
@@ -55,16 +57,16 @@ body {
     font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
+    border: none;
+}
+#get-weather-btn:hover{
+    background-color: #04335a;
 }
 
 #weather-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* border: 2px solid red; */
-    padding: 10px;
-    color: #fff;
+   text-align: center;
+   margin-top: 20px;
+    color: #fff;    
 }
 
 .hidden {
@@ -72,7 +74,6 @@ body {
 }
 
 #error-message {
-    padding: 10px;
     margin-top: 20px;
     color: rgb(222, 35, 35);
 }
