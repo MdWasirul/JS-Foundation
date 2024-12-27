@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotalMessage = document.getElementById("cart-total");
   const totalPriceDisplay = document.getElementById("total-price");
   const checkOutBtn = document.getElementById("checkout-btn");
+  const removeBtn = document.getElementById("remove");
 
   products.forEach((product) => {
     //create a div element to append to product list.
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   productList.addEventListener("click", (e) => {
+    // removeBtn.classList.remove("hidden");
     // console.log(e.target.tagName);
     if (e.target.tagName === "BUTTON") {
       // console.log("clicked");
@@ -52,18 +54,39 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrice = item.price + totalPrice;
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
-       ${item.name} - $${item.price.toFixed(2)}`;
+       ${item.name} - $${item.price.toFixed(2)}
+       <button id="remove">remove</button>`;
         cartItems.appendChild(cartItem);
-        totalPriceDisplay.textContent=`${totalPrice.toFixed(2)}`;
+        totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`;
       });
     } else {
       emptyCartMessage.classList.remove("hidden");
-      totalPriceDisplay.textContent=`$0.00`;
+      totalPriceDisplay.textContent = `$0.00`;
     }
   }
-  checkOutBtn.addEventListener("click",()=>{
-    cart.length=0;
+  checkOutBtn.addEventListener("click", () => {
+    cart.length = 0;
     alert("Checkout Successfully");
     renderCart();
-  })
+  });
+
+  // assignment ---> To add remove Button
+  // removeBtn.addEventListener("click", () => {
+  //   console.log("removeBtn clicled");
+  //   if (cart.length > 0) {
+  //     let removeItem = cart.pop();
+  //     // console.log(
+  //     //   `RemovedItem:${removeItem.name}- Price:${removeItem.price.toFixed(2)}`
+  //     // );
+  //     let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+  //     totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`;
+  //   }
+  //   if (cart.length == 0){
+  //     console.log("Cart is empty");
+  //     removeBtn.classList.add("hidden");
+  
+  //     totalPriceDisplay.textContent = `$0.00`; // Display zero if the cart is empty
+  //   }
+  //   renderCart();
+  // });
 });
