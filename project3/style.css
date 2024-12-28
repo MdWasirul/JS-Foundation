@@ -57,7 +57,7 @@ h2 {
 .product button:hover {
     background-color: #3700b3;
 }
-#remove{
+.remove{
     background-color: red;
     padding: 6px 10px;
     color: #fff;
@@ -67,7 +67,7 @@ h2 {
     transition: background-color 0.5s;
     margin-left:40px ;
 }
-#remove:hover{
+.remove:hover{
     background-color: #ab0707;
 }
 #cart-items {

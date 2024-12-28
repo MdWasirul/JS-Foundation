@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: 3, name: "Product 3", price: 59.999 },
   ];
 
-  const cart = [];
+  let cart = [];
 
   const productList = document.getElementById("product-list");
   const cartItems = document.getElementById("cart-items");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTotalMessage = document.getElementById("cart-total");
   const totalPriceDisplay = document.getElementById("total-price");
   const checkOutBtn = document.getElementById("checkout-btn");
-  const removeBtn = document.getElementById("remove");
+  // const removeBtn = document.getElementById("remove");
 
   products.forEach((product) => {
     //create a div element to append to product list.
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addtoCart(product);
     }
   });
+
   function addtoCart(product) {
     cart.push(product);
     console.log(cart);
@@ -50,20 +51,53 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cart.length > 0) {
       emptyCartMessage.classList.add("hidden");
       cartTotalMessage.classList.remove("hidden");
+
       cart.forEach((item, index) => {
         totalPrice = item.price + totalPrice;
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
        ${item.name} - $${item.price.toFixed(2)}
-       <button id="remove">remove</button>`;
+       `;
+
+        const removeBtn = document.createElement("button");
+        removeBtn.classList.add("remove");
+        removeBtn.setAttribute("data-id", item.id);
+        removeBtn.textContent = "REMOVE";
+        cartItem.appendChild(removeBtn);
         cartItems.appendChild(cartItem);
-        totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`;
+        // console.log(cartItems);
+        totalPriceDisplay.textContent = `$${totalPrice.toFixed(2)}`;
+
+        removeBtn.addEventListener("click", (e) => removeCartItem(e));
       });
     } else {
       emptyCartMessage.classList.remove("hidden");
       totalPriceDisplay.textContent = `$0.00`;
     }
   }
+
+  //Remove Cart Item Button Function
+  const removeCartItem = (e) => {
+    console.log("button clicked");
+    const productId = parseInt(e.target.getAttribute("data-id"));
+
+    let indx = cart.findIndex((item) => item.id === productId);
+    console.log(indx);
+    if (indx != -1) {
+      cart.splice(indx, 1); //splice take index ,delcount
+    }
+    console.log(cart);
+    renderCart();
+
+    // cart = cart.filter((item) => item.id != productId); //wirte alternate method to remove array element
+    //   cart=cart.find((item) => item.id===productId);
+    //  console.log(typeof cart);
+    // removeBtn.remove();
+    // // cartItem.innerText = "";
+    // totalPrice = totalPrice - item.price;
+    // totalPriceDisplay.textContent = `$${totalPrice.toFixed(2)}`;
+  };
+
   checkOutBtn.addEventListener("click", () => {
     cart.length = 0;
     alert("Checkout Successfully");
@@ -84,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   if (cart.length == 0){
   //     console.log("Cart is empty");
   //     removeBtn.classList.add("hidden");
-  
+
   //     totalPriceDisplay.textContent = `$0.00`; // Display zero if the cart is empty
   //   }
   //   renderCart();
