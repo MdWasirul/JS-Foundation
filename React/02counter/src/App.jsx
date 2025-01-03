@@ -4,13 +4,21 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  let [counter, setCounter] = useState(10); //react Hook
+  let [counter, setCounter] = useState(15); //react Hook
   /* counter ki value ko setCounter function update karta hai*/
   // let counter = 15;
   const addvalue = () => {
-    if(counter>=20)return;
-    setCounter(counter + 1);
-    console.log("clicked", counter);
+    // if(counter>=20)return;  
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    setCounter(prevCounter => prevCounter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+    setCounter(counter => counter+1);
+
+    // console.log("clicked", counter);
 
     // counter = counter + 1;
     // setCounter(counter);// 10,11,12,13......
@@ -19,7 +27,7 @@ function App() {
   };
 
   const removeValue = () => {
-    if (counter < 1) return;
+    // if (counter < 1) return;
 
     setCounter(counter - 1);
   };
