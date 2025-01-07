@@ -9,7 +9,7 @@ function App() {
     <UserContextProvider>
       <h1>React with Hitesh and Share its important </h1>
       <Login />
-      <Profile/>
+      <Profile />
     </UserContextProvider>
   );
 }
